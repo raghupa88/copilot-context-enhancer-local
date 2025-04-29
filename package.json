@@ -1,0 +1,35 @@
+{
+  "name": "copilot-context-enhancer",
+  "displayName": "Copilot Context Enhancer",
+  "description": "Enrich code prompts with internal guidelines before sending to GitHub Copilot",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "activationEvents": [
+    "onCommand:copilot-context-enhancer.enhancePrompt"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "copilot-context-enhancer.enhancePrompt",
+        "title": "Enhance Prompt with Local Guidelines"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "tsc -p ./",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.80.0",
+    "typescript": "^5.0.0",
+    "tslint": "^6.0.0",
+    "@types/node": "^18.0.0",
+    "vscode-test": "^1.6.0"
+  }
+}
